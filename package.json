@@ -4,11 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --aot --host 10.36.97.192 --port 4200",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "delete-directories": "[ -d node_modules ] && { rimraf node_modules doc dist; } || echo 'node_modules already deleted'",
+    "clean": "npm run delete-directories && command -v yarn >/dev/null && { yarn cache clean; } || { npm cache clean; }",
+    "clean-install": "npm run clean && command -v yarn >/dev/null && { yarn install; } || { npm install; }"
   },
   "private": true,
   "dependencies": {
@@ -17,13 +20,13 @@
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
-    "@angular/http": "^5.0.0",
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "bootstrap": "^4.0.0-beta.2"
   },
   "devDependencies": {
     "@angular/cli": "1.5.0",
