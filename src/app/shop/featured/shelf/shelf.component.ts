@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./shelf.component.scss']
 })
 export class ShelfComponent implements OnInit {
-  public title: string = 'h';
+  @Input() title: string;
 
   constructor() { }
 

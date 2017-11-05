@@ -1,7 +1,11 @@
 @import "../styles";
 
-.header {
-  background-color: $blue-header;
-  height: 60px;
-  font-size: 1.5rem;
+.bg {
+  background-color: $main-bg;
+
+  .header {
+    background-color: $blue-header;
+    height: 60px;
+    font-size: 1.5rem;
+  }
 }
