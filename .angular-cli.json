@@ -20,6 +20,7 @@
       "prefix": "my",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "assets/font-awesome-css/font-awesome.min.css",
         "styles.scss"
       ],
       "scripts": [],
