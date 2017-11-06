@@ -1,3 +1,28 @@
-<p>
-  item works!
-</p>
+<div [ngSwitch]="displayStyle">
+  <div *ngSwitchCase="DisplayStyle.TEXT">
+    <div class="row align-items-center" *ngFor="let item of items">
+      <div class="col-5">{{item.name}}</div>
+      <div class="col-3">¥{{item.price}}</div>
+      <div class="col-4 text-right">
+        <button class="btn btn-success btn-sm">购买</button>
+        <button class="btn btn-danger btn-sm">x</button>
+      </div>
+    </div>
+  </div>
+
+  <!--grid style-->
+  <div *ngSwitchDefault>
+    <div class="item mt-1 mb-3 ml-2 d-inline-block" *ngFor="let item of items">
+      <div class="card border-0 mb-1 text-center">
+        <img src="assets/icons/soda.svg">
+        <div class="price">${{item.price}}</div>
+        <div class="name">{{item.name}}</div>
+      </div>
+      <div class="add-to-cart border-0">
+        <my-add-to-cart></my-add-to-cart>
+      </div>
+    </div>
+  </div>
+</div>
+
+

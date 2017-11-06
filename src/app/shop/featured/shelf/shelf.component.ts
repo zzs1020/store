@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DisplayStyle } from '../../../shared/enums/display-style.enum';
 
 @Component({
   selector: 'my-shelf',
@@ -7,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShelfComponent implements OnInit {
   @Input() title: string;
+  @Input() displayStyle: DisplayStyle;
 
   constructor() { }
 

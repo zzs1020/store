@@ -6,10 +6,12 @@ import { CategoriesComponent } from './featured/categories/categories.component'
 import { ShelfComponent } from './featured/shelf/shelf.component';
 import { ItemComponent } from './featured/shelf/item/item.component';
 import { TitleComponent } from './featured/shelf/title/title.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [
     AdComponent,

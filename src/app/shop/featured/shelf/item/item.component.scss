@@ -1,0 +1,22 @@
+.item {
+  overflow-x: hidden;
+}
+
+.card {
+  width: 8rem;
+  height: 8rem;
+
+  img {
+    margin: 6px 0;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    left: 2rem;
+  }
+}
+
+.add-to-cart {
+  width: 8rem;
+  height: 2.8rem;
+  background-color: white;
+}
