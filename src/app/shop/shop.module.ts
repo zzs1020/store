@@ -5,6 +5,7 @@ import { FeaturedComponent } from './featured/featured.component';
 import { CategoriesComponent } from './featured/categories/categories.component';
 import { ShelfComponent } from './featured/shelf/shelf.component';
 import { ItemComponent } from './featured/shelf/item/item.component';
+import { TitleComponent } from './featured/shelf/title/title.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ItemComponent } from './featured/shelf/item/item.component';
     FeaturedComponent,
     CategoriesComponent,
     ShelfComponent,
-    ItemComponent
+    ItemComponent,
+    TitleComponent
   ],
   exports: [
   ]
