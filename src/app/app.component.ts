@@ -8,6 +8,7 @@ import { NavigationStart, Router } from '@angular/router';
 })
 export class AppComponent {
   showBack: boolean;
+  menuOpen: boolean;
 
   constructor(private router: Router) {
     router.events.subscribe(event => {
@@ -15,6 +16,10 @@ export class AppComponent {
         this.showBack = event.url.includes('details');
       }
     });
+  }
+
+  toggleMenu(event?): void {
+    this.menuOpen = !event;
   }
 
   goBack(): void {
