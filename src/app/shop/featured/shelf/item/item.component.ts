@@ -9,7 +9,10 @@ import { DisplayStyle } from '../../../../shared/enums/display-style.enum';
 export class ItemComponent implements OnInit {
   @Input() displayStyle: DisplayStyle;
   DisplayStyle = DisplayStyle;
-  items = [{name: '可乐', price: 2.99}, {name: '剃须刀', price: 20.99}, {name: '大米', price: 2.99}];
+  items = [
+    {name: '可乐', price: 2.99, img: 'assets/icons/soda.svg'},
+    {name: '剃须刀', price: 20.99, img: ''},
+    {name: '大米', price: 2.99, img: null}];
 
   constructor() { }
 
