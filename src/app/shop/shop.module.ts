@@ -7,11 +7,14 @@ import { ShelfComponent } from './featured/shelf/shelf.component';
 import { ItemComponent } from './featured/shelf/item/item.component';
 import { TitleComponent } from './featured/shelf/title/title.component';
 import { SharedModule } from '../shared/shared.module';
+import { DetailsComponent } from './details/details.component';
+import { ShopRoutingModule } from './shop-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ShopRoutingModule
   ],
   declarations: [
     AdComponent,
@@ -19,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     CategoriesComponent,
     ShelfComponent,
     ItemComponent,
-    TitleComponent
+    TitleComponent,
+    DetailsComponent
   ],
   exports: [
   ]

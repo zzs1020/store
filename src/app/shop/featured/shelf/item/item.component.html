@@ -13,7 +13,7 @@
   <!--grid style-->
   <div *ngSwitchDefault>
     <div class="item mt-1 mb-3 ml-2 d-inline-block" *ngFor="let item of items">
-      <div class="card border-0 mb-1 text-center">
+      <div class="card border-0 mb-1 text-center" (click)="viewDetails(item.id)">
         <img [src]="item.img || 'assets/icons/magnifying_glass.svg'">
         <div class="price">${{item.price}}</div>
         <div class="name">{{item.name}}</div>
