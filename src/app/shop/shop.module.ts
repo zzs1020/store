@@ -9,6 +9,8 @@ import { TitleComponent } from './featured/shelf/title/title.component';
 import { SharedModule } from '../shared/shared.module';
 import { DetailsComponent } from './details/details.component';
 import { ShopRoutingModule } from './shop-routing.module';
+import { BlahComponent } from './details/blah/blah.component';
+import { CommentComponent } from './details/blah/comment/comment.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { ShopRoutingModule } from './shop-routing.module';
     ShelfComponent,
     ItemComponent,
     TitleComponent,
-    DetailsComponent
+    DetailsComponent,
+    BlahComponent,
+    CommentComponent
   ],
   exports: [
   ]

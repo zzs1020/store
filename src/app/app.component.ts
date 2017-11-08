@@ -9,11 +9,18 @@ import { NavigationStart, Router } from '@angular/router';
 export class AppComponent {
   showBack: boolean;
   menuOpen: boolean;
+  headerColor: string;
 
   constructor(private router: Router) {
     router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        this.showBack = event.url.includes('details');
+        if (event.url.includes('details')) {
+          this.showBack = true;
+          this.headerColor = 'transparent';
+        } else {
+          this.showBack = false;
+          this.headerColor = '#06b1b9';
+        }
       }
     });
   }
