@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DisplayStyle } from '../../../shared/enums/display-style.enum';
+import { DisplayStyle } from '../../../shared/settings/display-style.enum';
 
 @Component({
   selector: 'my-shelf',

@@ -1,6 +1,6 @@
 <div [ngSwitch]="displayStyle">
   <div *ngSwitchCase="DisplayStyle.TEXT">
-    <div class="row align-items-center" *ngFor="let item of items">
+    <div class="row align-items-center" *ngFor="let item of items$ | async">
       <div class="col-5">{{item.name}}</div>
       <div class="col-3">¥{{item.price}}</div>
       <div class="col-4 text-right">
@@ -12,7 +12,7 @@
 
   <!--grid style-->
   <div *ngSwitchDefault>
-    <div class="item mt-1 mb-3 ml-2 d-inline-block" *ngFor="let item of items">
+    <div class="item mt-1 mb-3 ml-2 d-inline-block" *ngFor="let item of items$ | async">
       <div class="card border-0 mb-1 text-center pt-2" (click)="viewDetails(item.id)">
         <my-img [src]="item.img" [percent]="50"></my-img>
         <div class="price">${{item.price}}</div>

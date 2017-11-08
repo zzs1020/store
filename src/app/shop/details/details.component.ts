@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
+import { ProductService } from '../../shared/services/product/product.service';
+import { Observable } from 'rxjs/Observable';
+import { ProductDetails } from '../../shared/services/product/product-details';
 
 @Component({
   selector: 'my-details',
@@ -7,14 +11,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  item: any = {};
+  // item$: Observable<ProductDetails>;
+  item: ProductDetails;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.item.id = params.get('id');
-    });
+    // this.item$ = this.route.paramMap.switchMap(params => this.productService.getProductDetails(params.get('id')));
+    this.route.paramMap
+      .switchMap(params => this.productService.getProductDetails(params.get('id')))
+      .subscribe(itemDetails => this.item = itemDetails);
   }
 
 }

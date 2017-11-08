@@ -1,15 +1,15 @@
 <div class="bg-white"></div>
 
 <div class="card pb-5 border-0">
-  <my-img [src]="item.img" [percent]="50"></my-img>
+  <my-img [src]="item?.img" [percent]="50"></my-img>
 </div>
 
 <my-stars></my-stars>
 
 <div class="row">
   <div class="col">
-    <p>{{item.price}}</p>
-    <p>{{item.name}}</p>
+    <p>{{item?.price}}</p>
+    <p>{{item?.name}}</p>
   </div>
   <div class="col">
     <my-add-to-cart></my-add-to-cart>

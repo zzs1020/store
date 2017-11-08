@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../../../shared/enums/category.enum';
+import { Category } from '../../../shared/settings/category.enum';
 import { Router } from '@angular/router';
 
 @Component({
