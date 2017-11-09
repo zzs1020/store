@@ -1,5 +1,12 @@
-.item {
-  overflow-x: hidden;
+.items {
+  height: 12.4rem;
+  overflow-x: scroll;
+  overflow-y: hidden; // prevent surprise vertical scroll
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
