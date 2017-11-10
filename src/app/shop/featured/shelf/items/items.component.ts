@@ -13,16 +13,27 @@ import { Observable } from 'rxjs/Observable';
 export class ItemsComponent implements OnInit {
   @Input() displayStyle: DisplayStyle;
   DisplayStyle = DisplayStyle;
-  items$: Observable<Product[]>;
+  items: Product[];
+  loading: boolean;
 
   constructor(private router: Router, private productService: ProductService) { }
 
   ngOnInit() {
-    this.items$ = this.productService.getPopularProducts();
+    this.productService.getPopularProducts().subscribe(products => {
+      this.items = products;
+    });
   }
 
   viewDetails(itemId: string) {
     this.router.navigate(['/details', itemId]);
+  }
+
+  loadMore() {
+    this.loading = true;
+    this.productService.getPopularProducts().subscribe(products => {
+      this.loading = false;
+      this.items = this.items.concat(products);
+    });
   }
 
 }
