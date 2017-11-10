@@ -4,6 +4,11 @@ import { Router } from '@angular/router';
 import { Product } from '../../../../shared/services/product/product';
 import { ProductService } from '../../../../shared/services/product/product.service';
 import { Observable } from 'rxjs/Observable';
+import { Store } from '@ngrx/store';
+import { ProductsActionType } from '../../../../shared/settings/action-types.enum';
+import { ProductsState } from '../../../../shared/settings/states.interface';
+import { Action } from '../../../../shared/settings/action';
+
 
 @Component({
   selector: 'my-items',
@@ -13,27 +18,27 @@ import { Observable } from 'rxjs/Observable';
 export class ItemsComponent implements OnInit {
   @Input() displayStyle: DisplayStyle;
   DisplayStyle = DisplayStyle;
-  items: Product[];
-  loading: boolean;
+  loading: boolean; // loading just for a specific part because don't want to freeze UI
+  items$: Observable<Product[]>;
 
-  constructor(private router: Router, private productService: ProductService) { }
+  constructor(private router: Router, private productService: ProductService, private store: Store<ProductsState>) {
+    this.items$ = store.select('products');
+  }
 
   ngOnInit() {
-    this.productService.getPopularProducts().subscribe(products => {
-      this.items = products;
+    this.loadMore();
+  }
+
+  loadMore() {
+    this.loading = true;
+    this.productService.getPopularProducts().subscribe((action: Action<Product[]>) => {
+      this.store.dispatch(action);
+      this.loading = false;
     });
   }
 
   viewDetails(itemId: string) {
     this.router.navigate(['/details', itemId]);
-  }
-
-  loadMore() {
-    this.loading = true;
-    this.productService.getPopularProducts().subscribe(products => {
-      this.loading = false;
-      this.items = this.items.concat(products);
-    });
   }
 
 }
