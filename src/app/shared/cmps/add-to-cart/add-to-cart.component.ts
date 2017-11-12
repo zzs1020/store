@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-to-cart.component.scss']
 })
 export class AddToCartComponent implements OnInit {
+  added: boolean;
+  numberOfItem: number;
 
   constructor() { }
 
   ngOnInit() {
+    this.numberOfItem = 1;
+  }
+
+  addToCart() {
+    this.added = true;
   }
 
 }

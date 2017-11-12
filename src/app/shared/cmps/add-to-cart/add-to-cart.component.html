@@ -1,3 +1,23 @@
-<div class="text-center">
-  <i class="fa fa-shopping-cart"></i> 加入购物车
+<div class="p-2">
+  <div class="row no-gutters" *ngIf="added; else removed">
+    <div class="col-5">
+      <span class="fa-stack">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-minus fa-stack-1x"></i>
+      </span>
+    </div>
+    <div class="col-2 text-center number-size">{{numberOfItem}}</div>
+    <div class="col-5 text-right">
+      <span class="fa-stack">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x"></i>
+      </span>
+    </div>
+  </div>
+  <ng-template #removed>
+    <div class="text-center" (click)="addToCart()">
+      <i class="fa fa-shopping-cart"></i> 加入购物车
+    </div>
+  </ng-template>
 </div>
+
