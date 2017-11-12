@@ -11,16 +11,14 @@ import { ProductDetails } from '../../shared/services/product/product-details';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  // item$: Observable<ProductDetails>;
-  item: ProductDetails;
+  item$: Observable<ProductDetails>;
 
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
-    // this.item$ = this.route.paramMap.switchMap(params => this.productService.getProductDetails(params.get('id')));
-    this.route.paramMap
+    this.item$ = this.route.paramMap
       .switchMap(params => this.productService.getProductDetails(params.get('id')))
-      .subscribe(itemDetails => this.item = itemDetails);
+      .share(); // 1 api call
   }
 
 }

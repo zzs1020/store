@@ -8,4 +8,5 @@ export class ProductDetails {
   size: string;
   material: string;
   desp: string;
+  rate: number;
 }

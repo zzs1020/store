@@ -1,15 +1,16 @@
+<!--hidden header was transparent, give a white bg here-->
 <div class="bg-white"></div>
 
 <div class="card pb-5 border-0">
-  <my-img [src]="item?.img" [percent]="50"></my-img>
+  <my-img [src]="(item$|async)?.img" [percent]="50"></my-img>
 </div>
 
-<my-stars></my-stars>
+<my-stars [rate]="(item$|async)?.rate"></my-stars>
 
 <div class="row">
   <div class="col">
-    <p>{{item?.price}}</p>
-    <p>{{item?.name}}</p>
+    <p>{{(item$|async)?.price}}</p>
+    <p>{{(item$|async)?.name}}</p>
   </div>
   <div class="col">
     <my-add-to-cart></my-add-to-cart>
