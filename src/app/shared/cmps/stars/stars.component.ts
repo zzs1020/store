@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import * as _ from 'lodash';
+import range from 'lodash/range'; // es6 default export syntax cause here doesn't need {}
 
 @Component({
   selector: 'my-stars',
@@ -19,7 +19,7 @@ export class StarsComponent implements OnChanges {
     if (changes['rate']) {
       // if not int, then we need a extra half star
       this.extraHalfStar = this.rate % 1 !== 0;
-      this.stars = _.range(Math.floor(this.rate));
+      this.stars = range(Math.floor(this.rate));
     }
   }
 
