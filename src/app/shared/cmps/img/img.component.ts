@@ -7,11 +7,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ImgComponent implements OnInit {
   @Input() src: string;
-  @Input() percent: number;
+  @Input() percent: string = '100%';
+  @Input() rect: boolean;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onError() {
+    if (this.rect) {
+      this.src = 'assets/icons/404-2.svg';
+    } else {
+      this.src = 'assets/icons/magnifying_glass.svg';
+    }
   }
 
 }

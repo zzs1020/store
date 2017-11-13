@@ -1,3 +1,7 @@
-<div class="ad">
-
+<div class="ad" (swipeleft)="swipe($event.type)" (swiperight)="swipe($event.type)">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let ad of ads">
+      <my-img [rect]="true" [src]="ad"></my-img>
+    </ng-template>
+  </ngb-carousel>
 </div>

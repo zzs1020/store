@@ -1,3 +1,3 @@
 <div class="outer">
-  <img [src]="src || 'assets/icons/magnifying_glass.svg'" [ngStyle]="{'width': percent + '%', 'height': percent + '%'}">
+  <img (error)="onError()" [src]="src" [ngStyle]="{'width': percent, 'height': percent}">
 </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AdComponent } from './featured/ad/ad.component';
 import { FeaturedComponent } from './featured/featured.component';
 import { CategoriesComponent } from './featured/categories/categories.component';
@@ -17,7 +18,8 @@ import { ProductService } from '../shared/services/product/product.service';
   imports: [
     CommonModule,
     SharedModule,
-    ShopRoutingModule
+    ShopRoutingModule,
+    NgbModule
   ],
   declarations: [
     AdComponent,
