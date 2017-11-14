@@ -1,6 +1,7 @@
 .items {
   height: 12.4rem;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; // make IOS scroll smooth
   overflow-y: hidden; // prevent surprise vertical scroll
   white-space: nowrap;
 }
