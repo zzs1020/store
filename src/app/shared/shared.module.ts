@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { AddToCartComponent } from './cmps/add-to-cart/add-to-cart.component';
 import { SideMenuComponent } from './cmps/side-menu/side-menu.component';
 import { ImgComponent } from './cmps/img/img.component';
-import { StarsComponent } from './cmps/stars/stars.component';
 
 @NgModule({
   imports: [
@@ -13,13 +12,11 @@ import { StarsComponent } from './cmps/stars/stars.component';
     AddToCartComponent,
     SideMenuComponent,
     ImgComponent,
-    StarsComponent
   ],
   exports: [
     AddToCartComponent,
     SideMenuComponent,
     ImgComponent,
-    StarsComponent
   ]
 })
 export class SharedModule { }

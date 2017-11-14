@@ -7,3 +7,17 @@
   height: 60px;
   margin-top: -60px;
 }
+
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #ffdb9d;
+}
+
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: orange;
+}

@@ -4,12 +4,14 @@ import 'rxjs/add/operator/switchMap';
 import { ProductService } from '../../shared/services/product/product.service';
 import { Observable } from 'rxjs/Observable';
 import { ProductDetails } from '../../shared/services/product/product-details';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'my-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [NgbRatingConfig]
 })
 export class DetailsComponent implements OnInit {
   item$: Observable<ProductDetails>;
