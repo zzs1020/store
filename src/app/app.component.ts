@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { StatusService } from './shared/services/status/status.service';
 
@@ -9,7 +9,6 @@ import { StatusService } from './shared/services/status/status.service';
   selector: 'body',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   showBack: boolean;
