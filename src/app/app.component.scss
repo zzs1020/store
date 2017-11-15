@@ -13,3 +13,9 @@
     z-index: $zindex-header;
   }
 }
+
+my-alert /deep/ ngb-alert {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

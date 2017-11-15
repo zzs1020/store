@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { StoreModule } from '@ngrx/store';
 import { productsReducer } from './shared/reducers/products.reducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StatusService } from './shared/services/status/status.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     StoreModule.forRoot({ products: productsReducer })
   ],
-  providers: [],
+  providers: [
+    StatusService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

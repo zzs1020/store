@@ -9,7 +9,7 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class BlahComponent implements OnInit {
 
-  constructor(config: NgbTabsetConfig) {
+  constructor(private config: NgbTabsetConfig) {
     config.justify = 'justified';
   }
 
