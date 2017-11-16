@@ -1,27 +1,33 @@
 language: node_js
 node_js:
    - '8.9.1'
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: ./docs
-  on:
-    branch: master
-  target_branch: gh-pages
 
+# only re-download if have new
 cache:
   directories:
     - 'node_modules'
 
+# only watch master and greenkeeper's changes and then kick off travis
 branches:
    only:
       - master
       - /^greenkeeper/.*$/
 
+# install ng/cli because we'll use its commands
 before_script:
    - npm install -g @angular/cli
 
+# actual commands need to run
 script:
    - npm run lint
-   - npm run github
+   - npm run github # final command to build prod to ./docs
+
+# use above built version to deploy
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local_dir: ./docs # grab generated docs folder from master and push to gh-pages branch
+  target_branch: gh-pages
