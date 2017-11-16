@@ -10,6 +10,10 @@ deploy:
     branch: master
   target_branch: gh-pages
 
+cache:
+  directories:
+    - 'node_modules'
+
 branches:
    only:
       - master
@@ -20,3 +24,4 @@ before_script:
 
 script:
    - npm run lint
+   - npm run github
