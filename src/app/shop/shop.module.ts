@@ -13,6 +13,7 @@ import { ShopRoutingModule } from './shop-routing.module';
 import { BlahComponent } from './details/blah/blah.component';
 import { CommentComponent } from './details/blah/comment/comment.component';
 import { ProductService } from '../shared/services/product/product.service';
+import { AllComponent } from './all/all.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { ProductService } from '../shared/services/product/product.service';
     TitleComponent,
     DetailsComponent,
     BlahComponent,
-    CommentComponent
+    CommentComponent,
+    AllComponent
   ],
   exports: [
   ],

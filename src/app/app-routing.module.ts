@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FeaturedComponent } from './shop/featured/featured.component';
 
 const routes: Routes = [
-  { path: '', component: FeaturedComponent },
-  { path: 'store', redirectTo: '', pathMatch: 'full' },
+  { path: 'store', component: FeaturedComponent },
+  { path: '', redirectTo: 'store', pathMatch: 'full' },
 ];
 
 @NgModule({
