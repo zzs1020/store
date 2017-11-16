@@ -1,6 +1,14 @@
 language: node_js
 node_js:
    - '8.9.1'
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: /docs
+  on:
+    branch: master
+  target_branch: gh-pages
 
 branches:
    only:
@@ -11,4 +19,4 @@ before_script:
    - npm install -g @angular/cli
 
 script:
-   - npm run github
+   - npm run lint

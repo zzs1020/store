@@ -12,7 +12,7 @@ export class AdComponent implements OnInit {
   ads = ['assets/imgs/ad1.jpg', 'assets/imgs/ad2.jpg', 'assets/imgs/ad3.jpg'];
 
   constructor(private config: NgbCarouselConfig) {
-    config.interval = 3000; // todo: wait for ngbootstrap bug fix, doesn't work
+    this.config.interval = 3000; // todo: wait for ngbootstrap bug fix, doesn't work
   }
 
   ngOnInit() {

@@ -18,7 +18,7 @@ export class AppComponent {
   @HostBinding('style.position') position; // needed if want it works on ios
 
   constructor(private router: Router, private status: StatusService) {
-    router.events.subscribe(event => {
+    this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         if (event.url.includes('details')) {
           this.showBack = true;
