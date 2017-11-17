@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { ProductsState } from '../../../../shared/settings/states.interface';
 import { Action } from '../../../../shared/settings/action';
-import 'rxjs/add/operator/share';
+import { share } from 'rxjs/operators';
 
 @Component({
   selector: 'my-items',
@@ -21,7 +21,7 @@ export class ItemsComponent implements OnInit {
   items$: Observable<Product[]>;
 
   constructor(private router: Router, private productService: ProductService, private store: Store<ProductsState>) {
-    this.items$ = store.select('products').share(); // async won't subscribe multiple times with share
+    this.items$ = store.select('products').pipe(share()); // async won't subscribe multiple times with share
   }
 
   ngOnInit() {
