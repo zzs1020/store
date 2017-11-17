@@ -1,6 +1,8 @@
 # Store
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/SteveZheng-BSFT/store.svg)](https://greenkeeper.io/)
+[![Travis Badge](https://travis-ci.org/SteveZheng-BSFT/store.svg?branch=master)](https://travis-ci.org/)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
