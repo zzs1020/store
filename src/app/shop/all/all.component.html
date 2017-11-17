@@ -1,3 +1,10 @@
-<p>
-  all works!
-</p>
+<div ngbDropdown class="d-inline-block">
+  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selected.desp || '排序'}}</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <button class="dropdown-item" (click)="onSelect(type)" *ngFor="let type of menu">{{type.desp}}</button>
+  </div>
+</div>
+
+<div class="pagination">
+  <ngb-pagination [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
+</div>
