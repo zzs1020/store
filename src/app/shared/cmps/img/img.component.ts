@@ -15,6 +15,7 @@ export class ImgComponent implements OnInit {
   ngOnInit() {
   }
 
+  // catch when bad resource
   onError() {
     if (this.rect) {
       this.src = 'assets/icons/404-2.svg';
