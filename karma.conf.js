@@ -40,6 +40,7 @@ module.exports = function (config) {
   // set up chrome for travis karma test
   if (process.env.TRAVIS) {
     configuration.browsers = ['Chrome_travis_ci'];
+    configuration.singleRun = true; // exit after a npm test, otherwise travis won't npm run github
   }
 
   config.set(configuration);
