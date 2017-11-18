@@ -20,6 +20,7 @@ before_script:
 # actual commands need to run
 script:
    - npm run lint
+   - npm test
    - npm run github # final command to build prod to ./docs
 
 # use above built version to deploy

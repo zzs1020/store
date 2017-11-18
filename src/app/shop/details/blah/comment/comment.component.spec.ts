@@ -1,14 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommentComponent } from './comment.component';
+import { NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('CommentComponent', () => {
   let component: CommentComponent;
   let fixture: ComponentFixture<CommentComponent>;
 
   beforeEach(async(() => {
+    class NgbRatingConfigStub {
+    }
+
     TestBed.configureTestingModule({
-      declarations: [ CommentComponent ]
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NgbModule],
+      declarations: [ CommentComponent ],
+      providers: [{provide: NgbRatingConfig, useClass: NgbRatingConfigStub}]
     })
     .compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AllComponent } from './all.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('AllComponent', () => {
   let component: AllComponent;
@@ -8,6 +9,7 @@ describe('AllComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [NgbModule],
       declarations: [ AllComponent ]
     })
     .compileComponents();

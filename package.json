@@ -7,7 +7,7 @@
     "start": "ng serve --aot --host 10.0.0.38 --port 4200",
     "build": "ng build",
     "github": "ng build --prod --output-path docs --base-href /store/",
-    "test": "ng test",
+    "test": "ng test --sourcemap false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "delete-directories": "[ -d node_modules ] && { rimraf node_modules doc dist; } || echo 'node_modules already deleted'",
