@@ -1,17 +1,58 @@
 <div class="row outer no-gutters" @menuInOut>
-  <div class="col-9 menu-visible text-white">
+  <div class="col-10 menu-visible text-white">
     <div class="row no-gutters header-height align-items-center">
-      <div class="col"></div>
-      <div class="col-auto pr-3 order-12" (click)="closeMenu()">
+      <div class="col-auto offset-10 pr-3 order-12" (click)="closeMenu()">
         <i class="fa fa-close"></i>
       </div>
     </div>
 
-    <div class="row no-gutters">
-      <div class="col">饮料</div>
+    <div class="row no-gutters" (click)="goProfile()">
+      <div class="col-4 offset-2">
+        <img src="assets/imgs/profile.jpg" class="img-fluid thick-border rounded-circle">
+      </div>
+      <div class="ml-2 col align-self-end">
+        <div>郑择世</div>
+        vip
+      </div>
+    </div>
+
+    <div class="row no-gutters justify-content-end">
+      <div class="col-8">订单</div>
+      <div class="col-2">
+        <span class="badge badge-pill badge-light">2</span>
+      </div>
+    </div>
+    <div class="row no-gutters justify-content-end split-line">
+      <div class="col-8">心愿单</div>
+      <div class="col-2">
+        <span class="badge badge-pill badge-light">100</span>
+      </div>
+    </div>
+
+    <div class="row no-gutters justify-content-end">
+      <div class="col-10">推荐主题</div>
+    </div>
+    <div class="row no-gutters justify-content-end">
+      <div class="col-10">零食</div>
+    </div>
+    <div class="row no-gutters justify-content-end">
+      <div class="col-10">饮料</div>
+    </div>
+    <div class="row no-gutters justify-content-end">
+      <div class="col-10">日用</div>
+    </div>
+    <div class="row no-gutters justify-content-end">
+      <div class="col-10">烟酒</div>
+    </div>
+    <div class="row no-gutters justify-content-end split-line">
+      <div class="col-10">试运营商品</div>
+    </div>
+
+    <div class="row no-gutters justify-content-end">
+      <div class="col-3">登出</div>
     </div>
   </div>
 
-  <div class="col-3 menu-overlay" (click)="closeMenu()"></div>
+  <div class="col-2 menu-overlay" (click)="closeMenu()"></div>
 </div>
 

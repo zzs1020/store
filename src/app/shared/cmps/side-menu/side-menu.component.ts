@@ -32,4 +32,7 @@ export class SideMenuComponent implements OnInit {
   closeMenu() {
     this.closed.emit(true);
   }
+
+  goProfile() {
+  }
 }
