@@ -1,6 +1,6 @@
 <div [ngSwitch]="displayStyle">
   <div *ngSwitchCase="DisplayStyle.TEXT">
-    <div class="row align-items-center" *ngFor="let item of items$ | async">
+    <div class="row no-gutters align-items-center" *ngFor="let item of items$ | async">
       <div class="col-5">{{item.name}}</div>
       <div class="col-3">¥{{item.price}}</div>
       <div class="col-4 text-right">

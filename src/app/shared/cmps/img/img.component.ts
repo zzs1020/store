@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImgComponent implements OnInit {
   @Input() src: string;
   @Input() percent: string = '100%';
-  @Input() rect: boolean;
+  @Input() rect: boolean; // used for ad
 
   constructor() { }
 
