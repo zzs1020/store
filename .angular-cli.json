@@ -20,9 +20,14 @@
       "prefix": "my",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "assets/font-awesome-css/font-awesome.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
         "styles.scss"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "style-paths"
+        ]
+      },
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js"
       ],

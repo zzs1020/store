@@ -13,11 +13,17 @@ branches:
       - master
       - /^greenkeeper/.*$/
 
-# set up chrome for travis karma test
 before_install:
+  # set up chrome for travis karma test
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  # set up codecov
+  - pip install --user codecov
+
+after_success:
+  # set up codecov
+  - codecov --file coverage/lcov.info --disable search # then add --watch=false --code-coverage to npm test so cli will generate report
 
 # install ng/cli because we'll use its commands
 before_script:
