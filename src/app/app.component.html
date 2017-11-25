@@ -2,8 +2,8 @@
   <div class="header row no-gutters align-items-center" [style.background-color]="headerColor">
     <div *ngIf="showBack" class="col-1 ml-3" (click)="goBack()"><i class="fa fa-chevron-left"></i></div>
     <div class="col-1 ml-2" (click)="toggleMenu()"><i class="fa fa-bars"></i></div>
-    <div class="col text-right mr-3"><i class="fa fa-search"></i></div>
-    <div class="col-1" (click)="alert()"><i class="fa fa-shopping-bag"></i></div>
+    <div class="col text-right mr-3" (click)="alert()"><i class="fa fa-search"></i></div>
+    <div class="col-1"><my-cart-icon></my-cart-icon></div>
   </div>
   <my-side-menu *ngIf="menuOpen" (closed)="toggleMenu($event)"></my-side-menu>
 

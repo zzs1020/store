@@ -8,7 +8,9 @@ import { SharedModule } from './shared/shared.module';
 import { StoreModule } from '@ngrx/store';
 import { productsReducer } from './shared/reducers/products.reducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StatusService } from './shared/services/status/status.service';
+import { cartReducer } from './shared/reducers/cart.reducer';
+import { CartModule } from './cart/cart.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,12 @@ import { StatusService } from './shared/services/status/status.service';
     HttpClientModule,
     AppRoutingModule,
     ShopModule,
+    CartModule,
     SharedModule,
-    StoreModule.forRoot({ products: productsReducer })
-  ],
-  providers: [
-    StatusService
+    StoreModule.forRoot({ products: productsReducer, cart: cartReducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25 //  Retains last 25 states
+    })
   ],
   bootstrap: [AppComponent]
 })

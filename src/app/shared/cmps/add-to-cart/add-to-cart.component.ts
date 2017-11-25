@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../../services/product/product';
+import { CartService } from '../../services/cart/cart.service';
+import { CartItem } from '../../services/cart/cart';
 
 @Component({
   selector: 'my-add-to-cart',
@@ -8,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class AddToCartComponent implements OnInit {
   added: boolean;
   numberOfItem: number;
+  @Input() item: Product;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
     this.numberOfItem = 1;
@@ -17,6 +21,7 @@ export class AddToCartComponent implements OnInit {
 
   addToCart() {
     this.added = true;
+    this.cartService.add(new CartItem(this.item));
   }
 
 }

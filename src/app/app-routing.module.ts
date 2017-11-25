@@ -3,12 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { FeaturedComponent } from './shop/featured/featured.component';
 
 const routes: Routes = [
-  { path: '', component: FeaturedComponent },
-  { path: 'store', redirectTo: '', pathMatch: 'full' },
+  { path: '', component: FeaturedComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true } /* <-- debugging purposes only */)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

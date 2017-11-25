@@ -21,10 +21,10 @@ export class ItemsComponent implements OnInit {
   items$: Observable<Product[]>;
 
   constructor(private router: Router, private productService: ProductService, private store: Store<ProductsState>) {
-    this.items$ = store.select('products').pipe(share()); // async won't subscribe multiple times with share
   }
 
   ngOnInit() {
+    this.items$ = this.store.select('products').pipe(share()); // async won't subscribe multiple times with share
     this.loadMore();
   }
 

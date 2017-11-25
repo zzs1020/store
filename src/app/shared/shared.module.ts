@@ -5,6 +5,7 @@ import { SideMenuComponent } from './cmps/side-menu/side-menu.component';
 import { ImgComponent } from './cmps/img/img.component';
 import { AlertComponent } from './cmps/alert/alert.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StatusService } from './services/status/status.service';
 
 @NgModule({
   imports: [
@@ -22,6 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SideMenuComponent,
     ImgComponent,
     AlertComponent
-  ]
+  ],
+  providers: [
+    StatusService
+  ],
 })
 export class SharedModule { }
