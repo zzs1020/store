@@ -6,6 +6,9 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ProductService } from '../../shared/services/product/product.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { CartService } from '../../shared/services/cart/cart.service';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from '../../shared/reducers/cart.reducer';
 
 describe('DetailsComponent', () => {
   let component: DetailsComponent;
@@ -14,10 +17,11 @@ describe('DetailsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],
-      imports: [SharedModule, HttpClientTestingModule, RouterTestingModule],
+      imports: [SharedModule, HttpClientTestingModule, RouterTestingModule, StoreModule.forRoot({cart: cartReducer})],
       declarations: [ DetailsComponent ],
       providers: [
         ProductService,
+        CartService,
       ]
     })
     .compileComponents();

@@ -5,7 +5,7 @@ import { DisplayStyle } from '../../shared/settings/display-style.enum';
   selector: 'my-featured',
   templateUrl: './featured.component.html',
   styleUrls: ['./featured.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeaturedComponent {
   DisplayStyle = DisplayStyle;

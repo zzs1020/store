@@ -5,6 +5,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/dc9f87b9e0fbb77881a7/maintainability)](https://codeclimate.com/github/SteveZheng-BSFT/store/maintainability)
 [![codecov](https://codecov.io/gh/SteveZheng-BSFT/store/branch/master/graph/badge.svg)](https://codecov.io/gh/SteveZheng-BSFT/store)
 [![NSP Status](https://nodesecurity.io/orgs/stevezheng-bsft/projects/e3f21124-7a41-4762-a2dc-f60ce416bd91/badge)](https://nodesecurity.io/orgs/stevezheng-bsft/projects/e3f21124-7a41-4762-a2dc-f60ce416bd91)
+[![Known Vulnerabilities](https://snyk.io/test/github/stevezheng-bsft/store/badge.svg)](https://snyk.io/test/github/stevezheng-bsft/store)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 

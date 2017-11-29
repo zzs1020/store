@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CartIconComponent } from './cart-icon.component';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from '../../shared/reducers/cart.reducer';
 
 describe('CartIconComponent', () => {
   let component: CartIconComponent;
@@ -8,7 +10,10 @@ describe('CartIconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CartIconComponent ]
+      imports: [
+        StoreModule.forRoot({cart: cartReducer})
+      ],
+      declarations: [ CartIconComponent ],
     })
     .compileComponents();
   }));

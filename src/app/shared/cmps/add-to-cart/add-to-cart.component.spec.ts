@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddToCartComponent } from './add-to-cart.component';
+import { CartService } from '../../services/cart/cart.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from '../../reducers/cart.reducer';
 
 describe('AddToCartComponent', () => {
   let component: AddToCartComponent;
@@ -8,7 +12,14 @@ describe('AddToCartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddToCartComponent ]
+      imports: [
+        HttpClientTestingModule,
+        StoreModule.forRoot({cart: cartReducer})
+      ],
+      declarations: [ AddToCartComponent ],
+      providers: [
+        CartService,
+      ]
     })
     .compileComponents();
   }));
