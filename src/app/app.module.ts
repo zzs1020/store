@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { cartReducer } from './shared/reducers/cart.reducer';
 import { CartModule } from './cart/cart.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     ShopModule,
     CartModule,
     SharedModule,
