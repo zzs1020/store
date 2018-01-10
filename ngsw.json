@@ -1,0 +1,63 @@
+{
+  "configVersion": 1,
+  "index": "/store/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/store/favicon.ico",
+        "/store/index.html",
+        "/store/inline.c5c4c44ed8da2387a48c.bundle.js",
+        "/store/main.09b61df2457593a38078.bundle.js",
+        "/store/polyfills.4ed7a40b393299ca5d07.bundle.js",
+        "/store/scripts.b34200588a911f5777b5.bundle.js",
+        "/store/styles.4fd8dbb59d5cb221f4c6.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/store/assets/icons/404-2.svg",
+        "/store/assets/icons/404.svg",
+        "/store/assets/icons/chips.svg",
+        "/store/assets/icons/liquor_cigar.svg",
+        "/store/assets/icons/magnifying_glass.svg",
+        "/store/assets/icons/missing.svg",
+        "/store/assets/icons/question.svg",
+        "/store/assets/icons/soda.svg",
+        "/store/assets/icons/tissues.svg",
+        "/store/assets/imgs/ad1.jpg",
+        "/store/assets/imgs/ad2.jpg",
+        "/store/assets/imgs/profile.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/store/inline.c5c4c44ed8da2387a48c.bundle.js": "d7d5072a80cef57ffd1ca7687df7a3b4e4ce1371",
+    "/store/assets/icons/404-2.svg": "dcd2e5d9f5162847ab0a62c53961176fab1e6bda",
+    "/store/main.09b61df2457593a38078.bundle.js": "75384b1ad03af9d96bc19f310cdfcd6aa7b4c35f",
+    "/store/assets/icons/404.svg": "a4066912bea8bedf72037c26aea9cb877a1d91c7",
+    "/store/polyfills.4ed7a40b393299ca5d07.bundle.js": "c3f1f33ab6b1abbd44b7bc03922cceda22f05019",
+    "/store/assets/icons/chips.svg": "a5a936c815d9a1283a6ec7bc4149b5cf3eb5c681",
+    "/store/scripts.b34200588a911f5777b5.bundle.js": "14a626c0f7cca1d64bac5544e5f5f63224bb19cf",
+    "/store/assets/icons/liquor_cigar.svg": "9ef5fadddfbfcb71df85f75f547146fda6bcaadd",
+    "/store/styles.4fd8dbb59d5cb221f4c6.bundle.css": "89dbc80eb3f61efdfd3b0b35898658cf0cda02e0",
+    "/store/assets/icons/magnifying_glass.svg": "f11dd0a17605cd94b59e518c78b01f890a65bb42",
+    "/store/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/store/assets/icons/missing.svg": "e40e7a216b595164367147e4102df3bd1301f55c",
+    "/store/index.html": "7c8a3d91b4cec36ca287689011883c209e394e86",
+    "/store/assets/icons/question.svg": "6a4a002f8e34e7d8db804444319558ba521edc76",
+    "/store/assets/icons/soda.svg": "77d587cd7abbfcbc4ce4b29de8379f879e2b8d04",
+    "/store/assets/icons/tissues.svg": "1a311bf21b3e1ae11387328d3d49eccfdacc4fcd",
+    "/store/assets/imgs/ad1.jpg": "710ae88be2911686b6e6d30a25bb317a6e92042d",
+    "/store/assets/imgs/ad2.jpg": "e621ffca573340312c29abf6bab84ed1a6d656bd",
+    "/store/assets/imgs/profile.jpg": "99c4e2f77364763fe8e441e49a634c4580724342"
+  }
+}
