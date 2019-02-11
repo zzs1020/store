@@ -31,7 +31,7 @@
     "@ngrx/store-devtools": "^4.1.1",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
-    "bootstrap": "4.0.0-beta.2",
+    "bootstrap": "4.3.0",
     "core-js": "^2.5.3",
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",
