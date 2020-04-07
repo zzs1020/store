@@ -166,9 +166,10 @@
   version "1.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-1.0.0-beta.9.tgz#08d4119a3d72689b2bef8f1d30aaf6c8aabffd72"
 
-"@ngrx/store-devtools@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-4.1.1.tgz#20745c39c7560fdc05fa4f22638442a7ec7dd676"
+"@ngrx/store-devtools@^9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-9.1.0.tgz#503f6468454bb633433408884b99377716f9d884"
+  integrity sha512-KDvuNBxfTgDHjESiouEoPXq8GCUYbHnA+jOs8MzzwVDmxNLeZuDy3amaVzKv9Q5nncI6mNGcXOzTKWzapET8Sw==
 
 "@ngrx/store@^4.1.1":
   version "4.1.1"
