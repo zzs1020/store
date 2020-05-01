@@ -13,7 +13,9 @@
     "e2e": "ng e2e",
     "delete-directories": "[ -d node_modules ] && { rimraf node_modules doc dist; } || echo 'node_modules already deleted'",
     "clean": "npm run delete-directories && command -v yarn >/dev/null && { yarn cache clean; } || { npm cache clean; }",
-    "clean-install": "npm run clean && command -v yarn >/dev/null && { yarn install; } || { npm install; }"
+    "clean-install": "npm run clean && command -v yarn >/dev/null && { yarn install; } || { npm install; }",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -41,7 +43,8 @@
     "rxjs": "^5.5.6",
     "serve-favicon": "^2.4.5",
     "web-animations-js": "^2.3.1",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@angular/cli": "1.6.3",
@@ -65,5 +68,6 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.8.0",
     "typescript": "~2.5.3"
-  }
+  },
+  "snyk": true
 }
